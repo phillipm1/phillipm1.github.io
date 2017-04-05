@@ -1,0 +1,199 @@
+strong{
+  font-size: 20px;
+  text-decoration-line: underline;
+}
+body {
+  margin: 0;
+  font-family: 'Droid Serif', serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #000;
+}
+
+/* BACK GROUND*/
+
+
+  .hero {
+  background: url("Website-Design-Background.png") no-repeat center center;
+  background-size: cover;
+  height: 100vh; }
+  
+  .hero .intro {
+    padding: 3rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+
+  .hero h1 {
+    font-family: 'Gotham';
+    color: black;
+    font-size: 3.5rem;
+    line-height: 1.5em;
+    letter-spacing: .2em;
+    font-weight: 300;
+    text-align: center; 
+   
+
+  }
+
+  .hero p {
+    color: black;
+    line-height: 1.75em;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 2rem; 
+    
+  }
+
+    /* LOGO IN MIDDLE */
+
+  .hero .tech-img {
+    background: url("Phill.png") no-repeat center center;
+    background-size: cover;
+    height: 9rem;
+    width: 9rem;
+    border-radius: 10%;
+    display: block;
+    margin: -30px;
+
+    animation: movelogo 7.5s forwards;
+    position: absolute;
+  
+}
+
+@keyframes movelogo {
+  from {left:-500px;}
+  to   {left: 500px;}
+
+}
+
+
+  @media only screen and (min-width: 40.063em) {
+    .hero .tech-img {
+      height: 10rem;
+      width: 10rem; }
+    .hero h1 {
+      padding-top: 4.5rem;
+      text-align: center;
+      font-size: 2.5rem; }
+    .hero p {
+      text-align: center; } }
+ 
+  /* LOGO IN THE MIDDLE*/
+
+
+/* Header Menu Bar*/
+
+.header {
+  background-color: none;
+  position: fixed;
+  width: 10%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: none;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px none;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  padding: 15px 15px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 15px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
